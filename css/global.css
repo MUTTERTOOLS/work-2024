@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 宋体; */
+}
+
+body {
+  font-size: 14px;
+  font-family: Menlo, Bitstream Vera Sans Mono, DejaVu Sans Mono, Monaco,
+    Consolas, monospace !important;
+  color: #333;
+  /* background-image: url(../assets/bg.gif); */
+
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.el-input__inner[loginIpt="false"] {
+  background-color: rgb(247, 250, 252);
+}
+
+.el-input__inner[loginIpt="true"] {
+  background-color: white;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  height: 40px;
+  font-size: 12px;
+  line-height: 40px;
+  background-color: rgb(247, 250, 252);
+  border-radius: 4px;
+  outline: 0;
+  padding: 0 15px;
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border: 1px solid #dcdfe6;
+}
+
+input::placeholder {
+  color: #c0c4cc;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #fff;
+  border-color: #409eff;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+  filter: brightness(1.01);
+  /* background-color: #fff; */
+  /* border-color: #409eff; */
+}
+
+.button {
+  display: block;
+  width: 260px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  cursor: pointer;
+
+}
+
+header {
+  height: 60px;
+  background-color: white;
+}
+
+header .nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 30px;
+}
+
+header .nav li {
+  width: 70px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+header .avatar {
+  width: 60px;
+  height: 60px;
+  background: url("../assets/avatar.png");
+  background-size: 40px 40px;   
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* header .nav li:hover {
+  border-bottom: 2px solid #409EFF;
+} */
+
+header .nav li:nth-child(1) {
+  color: #409EFF;
+  border-bottom: 2px solid #409EFF;
+}
+
+footer {
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  margin: 30px 0 20px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

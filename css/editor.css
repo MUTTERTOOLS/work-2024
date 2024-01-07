@@ -1,0 +1,43 @@
+.back {
+    justify-self: right;
+}
+
+body {
+    background: url("../assets/banner.jpg") center center;
+}
+
+.container {
+    width: 70%;
+    padding: 0 50px;
+    margin: 30px auto;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(255,255,255, .8);
+    background: url("../assets/bg.gif");
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form label {
+    margin: 30px 0 20px 0;
+}
+
+label label {
+    margin: 0 20px;
+}
+
+input[type="radio"] {
+    width: auto;
+}
+
+input {
+    width: 100%;
+    background-color: white!important;
+}
+
+.ql-editor {
+    min-height: 300px;
+}

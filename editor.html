@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/editor.css" />
+    <link
+      href="https://cdn.quilljs.com/1.0.0/quill.snow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <label for="title">文章标题：</label>
+        <input id="title" type="text" />
+
+        <label for="editor">文章内容：</label>
+        <div id="toolbar">
+          <button class="ql-bold">Bold</button>
+          <button class="ql-italic">Italic</button>
+          <button class="ql-link">link</button>
+          <button class="ql-image">image</button>
+        </div>
+        <div id="editor"></div>
+
+        <label
+          >文章来源：
+          <label for="original"
+            ><input id="original" name="source" type="radio" />原创</label
+          >
+          <label for="transport"
+            ><input id="transport" name="source" type="radio" />转载</label
+          >
+        </label>
+
+        <label for="field"
+          >发布板块：
+          <select name="field" id="field">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+          </select>
+        </label>
+      </form>
+    </div>
+    <footer>
+      <p>Copyright © 2024 师大云技术有限公司</p>
+      <p>Powered by .NET 5.0 on Kubernetes</p>
+    </footer>
+
+    <script>
+      var editor = new Quill("#editor", {
+        modules: { toolbar: "#toolbar" },
+        theme: "snow",
+        placeholder: "请输入内容......",
+      });
+      function goBack() {
+        history.back();
+      }
+    </script>
+
+    <script
+      defer="defer"
+      id="ribbon"
+      src="./js/canvas-ribbon.min.js"
+      size="150"
+      alpha="0.6"
+      zindex="-1"
+      mobile="false"
+      data-click="true"
+    ></script>
+  </body>
+</html>
