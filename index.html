@@ -8,9 +8,10 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <title>Blog</title>
-    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/all.min.css" />
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   </head>
 
   <body>
@@ -109,14 +110,18 @@
         <!-- 导航 -->
         <nav id="nav" class="show">
           <span id="blog_name">
-            <a id="site-name" href="javascript:void(0);">BYA's Blog</a>
+            <a id="site-name" href="javascript:void(0);">HZNU's Blog</a>
           </span>
           <div id="menus">
             <div id="search-button">
               <a class="social-icon search">
                 <i class="fas fa-search fa-fw"></i>
                 <span> 搜索</span>
-                <input type="text" class="search-input" placeholder="请输入搜索内容" />
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="请输入搜索内容"
+                />
               </a>
             </div>
             <div class="menus_items">
@@ -132,7 +137,7 @@
                 ></a>
                 <ul class="menus_item_child">
                   <li>
-                    <a class="site-page child" href="javascript:void(0);"
+                    <a class="site-page child" href="./404.html"
                       ><i class="fa-fw fas fa-tags"></i><span> 标签</span></a
                     >
                   </li>
@@ -184,7 +189,7 @@
 
         <!-- 网站信息 -->
         <div id="site-info">
-          <h1 id="site-title">BYA's Blog</h1>
+          <h1 id="site-title">HZNU's Blog</h1>
         </div>
 
         <!-- 下滑 -->
@@ -272,9 +277,7 @@
           <div class="recent-post-item">
             <div class="post_cover right">
               <a href="javascript:void(0);" title="《原则》摘录"
-                ><img
-                  class="post_bg entered loaded"
-                  src="./assets/article.jpg"
+                ><img class="post_bg entered loaded" src="./assets/article.jpg"
               /></a>
             </div>
             <div class="recent-post-info">
@@ -734,25 +737,39 @@
     ></script>
     <script type="text/javascript">
       // 点击向下滚动屏幕高度
-      document.querySelector(".scroll-down-effects").onclick = function fn (e) {
+      document.querySelector(".scroll-down-effects").onclick = function fn(e) {
         window.scrollTo({
           top: document.querySelector("header").offsetHeight,
-          behavior: "smooth"
+          behavior: "smooth",
         });
-      }
+      };
       // 点击滚动回到顶部
-      document.querySelector("#go-up").onclick = function fn () {
+      document.querySelector("#go-up").onclick = function fn() {
         window.scrollTo({
           top: 0,
-          behavior: "smooth"
-        })
-      }
+          behavior: "smooth",
+        });
+      };
 
-      Array.from(document.querySelectorAll(".article-title")).forEach((elem) => {
-        elem.onclick = function() {
-          location.href = "/article.html"
+      Array.from(document.querySelectorAll(".article-title")).forEach(
+        (elem) => {
+          elem.onclick = function () {
+            location.href = "/article.html";
+          };
         }
-      })
+      );
+
+      var typed = new Typed("#site-title", {
+        strings: [
+          `Welcome to HZNU's blog, `,
+          `の Tiny Home!🤣🤣🤣`
+        ],
+        typeSpeed: 50,
+        backSpeed: 60,
+        loop: true,
+        // cursorChar: '🔥',
+        // cursorChar: '🌈',
+      });
     </script>
   </body>
 </html>

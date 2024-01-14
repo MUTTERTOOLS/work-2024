@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: 宋体; */
 }
 
 body {
@@ -10,8 +9,6 @@ body {
   font-family: Menlo, Bitstream Vera Sans Mono, DejaVu Sans Mono, Monaco,
     Consolas, monospace !important;
   color: #333;
-  /* background-image: url(../assets/bg.gif); */
-
 }
 
 li {
@@ -20,14 +17,6 @@ li {
 
 a {
   text-decoration: none;
-}
-
-.el-input__inner[loginIpt="false"] {
-  background-color: rgb(247, 250, 252);
-}
-
-.el-input__inner[loginIpt="true"] {
-  background-color: white;
 }
 
 input[type="text"],
@@ -57,8 +46,6 @@ input[type="password"]:focus {
 input[type="text"]:hover,
 input[type="password"]:hover {
   filter: brightness(1.01);
-  /* background-color: #fff; */
-  /* border-color: #409eff; */
 }
 
 .button {
